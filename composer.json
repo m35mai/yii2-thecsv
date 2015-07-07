@@ -13,10 +13,7 @@
 			"role": "Creator"
 		}
 	],
-	"require": {
-		"php": ">=5.4.0",
-		"lib-pcre": "*"
-	},
+	"require": {},
 	"autoload": {
 		"psr-4": {
 			"m35\\thecsv\\": ""
