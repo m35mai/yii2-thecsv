@@ -1,5 +1,5 @@
 <?php
-namespace m35\thecsv\theCsv;
+namespace m35\thecsv;
 
 class theCsv {
 
