@@ -1,5 +1,5 @@
 <?php
-namespace m35\theCsv;
+namespace m35\thecsv\theCsv;
 
 class theCsv {
 
@@ -7,8 +7,8 @@ class theCsv {
     {
         if (is_string($parameter)) {
             $parameter = ['table' => $parameter];
-			$db= \Yii::$app->getDb();
-			$tables = $db->schema->getTableNames();
+            $db= \Yii::$app->getDb();
+            $tables = $db->schema->getTableNames();
         }
         if (is_array($parameter)) {
             if ( ! empty($parameter['table'])) {
