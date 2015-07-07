@@ -13,6 +13,7 @@
 			"role": "Creator"
 		}
 	],
+    "minimum-stability": "stable",
 	"require": {},
 	"autoload": {
 		"psr-4": {
