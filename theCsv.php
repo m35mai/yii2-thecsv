@@ -3,13 +3,12 @@ namespace m35\theCsv;
 
 class theCsv {
 
-
     public static function export($parameter)
     {
-        $db= \Yii::$app->getDb();
-        $tables = $db->schema->getTableNames();
         if (is_string($parameter)) {
             $parameter = ['table' => $parameter];
+			$db= \Yii::$app->getDb();
+			$tables = $db->schema->getTableNames();
         }
         if (is_array($parameter)) {
             if ( ! empty($parameter['table'])) {
