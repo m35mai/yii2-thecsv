@@ -73,3 +73,11 @@ theCsv::export([
     'sql' => 'SELECT * FROM user',
 ]);
 ```
+
+### 3.1.8、自定义SQL，绑定参数
+```
+theCsv::export([
+    'sql' => 'SELECT * FROM user WHERE id = :id AND status = :status',
+    'bind' => [':id' => 1, ':status' => 1],
+]);
+```
