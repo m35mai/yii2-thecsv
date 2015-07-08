@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/13552277443/yii2-thecsv",
 	"type": "yii2-extension",
 	"license": "MIT",
-	"minimum-stability": "dev",
 	"authors": [
 		{
 			"name": "m35",
