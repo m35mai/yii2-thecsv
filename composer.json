@@ -1,10 +1,10 @@
 {
 	"name": "m35/thecsv",
 	"description": "yii2 csv export extension",
+	"license": "MIT",
 	"keywords": ["csv", "yii2", "yii", "export"],
 	"homepage": "https://github.com/13552277443/yii2-thecsv",
-	"type": "library",
-	"license": "MIT",
+	"type": "yii2-extension",
 	"authors": [
 		{
 			"name": "m35",
