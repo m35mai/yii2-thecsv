@@ -7,11 +7,11 @@ class theCsv {
     {
         if (is_string($parameter)) {
             $parameter = ['table' => $parameter];
-            $db= \Yii::$app->getDb();
-            $tables = $db->schema->getTableNames();
         }
         if (is_array($parameter)) {
             if ( ! empty($parameter['table'])) {
+                $db= \Yii::$app->getDb();
+                $tables = $db->schema->getTableNames();
                 if ( ! in_array($parameter['table'], $tables)) {
                     throw new \yii\web\HttpException(500, "table '{$parameter['table']}' not exists!");
                 }
