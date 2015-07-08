@@ -5,7 +5,7 @@
 	"keywords": ["csv", "yii2", "yii", "export"],
 	"homepage": "https://github.com/13552277443/yii2-thecsv",
 	"type": "yii2-extension",
-	"license": "Apache-2.0",
+	"license": MIT",
 	"minimum-stability": "dev",
 	"authors": [
 		{
