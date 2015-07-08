@@ -1,6 +1,7 @@
 {
 	"name": "m35/thecsv",
 	"description": "yii2 csv export extension",
+	"version": "1.0.0",
 	"keywords": ["csv", "yii2", "yii", "export"],
 	"homepage": "https://github.com/13552277443/yii2-thecsv",
 	"type": "library",
