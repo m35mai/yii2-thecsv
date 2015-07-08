@@ -46,6 +46,7 @@ class theCsv {
                     $parameter['name'] = $parameter['table'] . '.csv';
                 }
             } elseif ( ! empty($parameter['sql'])) {
+                $db= \Yii::$app->getDb();
                 $command = $db->createCommand($parameter['sql']);
                 if ( ! empty($parameter['bind'])) {
                     $command->bindValues($parameter['bind']);
