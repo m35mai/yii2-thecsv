@@ -31,7 +31,16 @@ theCsv::export([
 ]);
 ```
 
-### 3.1.3、导出user表的用户名和密码，自定义表头
+### 3.1.3、导出user表除status字段外的所有数据
+```
+theCsv::export([
+    'table' => 'user',
+    'fields' => ['status'],
+    'exceptFields' => true,
+]);
+```
+
+### 3.1.4、导出user表的用户名和密码，自定义表头
 ```
 theCsv::export([
     'table' => 'user',
@@ -40,7 +49,7 @@ theCsv::export([
 ]);
 ```
 
-### 3.1.4、导出user表的用户名和密码，不要表头
+### 3.1.5、导出user表的用户名和密码，不要表头
 ```
 theCsv::export([
     'table' => 'user',
@@ -49,7 +58,7 @@ theCsv::export([
 ]);
 ```
 
-### 3.1.5、导出user表有效用户，使用condition
+### 3.1.6、导出user表有效用户，使用condition
 ```
 theCsv::export([
     'table' => 'user',
@@ -58,7 +67,7 @@ theCsv::export([
 ```
 condition请参考http://www.yiiframework.com/doc-2.0/yii-db-query.html#where()-detail
 
-### 3.1.6、导出user表有效用户，使用orderby和limit
+### 3.1.7、导出user表有效用户，使用orderby和limit
 ```
 theCsv::export([
     'table' => 'user',
@@ -67,14 +76,14 @@ theCsv::export([
     'limit' => 10,
 ]);
 ```
-### 3.1.7、自定义SQL
+### 3.1.8、自定义SQL
 ```
 theCsv::export([
     'sql' => 'SELECT * FROM user',
 ]);
 ```
 
-### 3.1.8、自定义SQL，绑定参数
+### 3.1.9、自定义SQL，绑定参数
 ```
 theCsv::export([
     'sql' => 'SELECT * FROM user WHERE id = :id AND status = :status',
