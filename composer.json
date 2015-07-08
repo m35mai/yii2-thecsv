@@ -4,7 +4,7 @@
 	"version": "1.0.0",
 	"keywords": ["csv", "yii2", "yii", "export"],
 	"homepage": "https://github.com/13552277443/yii2-thecsv",
-	"type": "library",
+	"type": "yii2-extension",
 	"license": "MIT",
 	"authors": [
 		{
