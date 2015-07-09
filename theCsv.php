@@ -19,6 +19,9 @@ class theCsv {
                 if ( ! empty($parameter['limit'])) {
                     $query->limit($parameter['limit']);
                 }
+                if ( ! empty($parameter['offset'])) {
+                    $query->offset($parameter['offset']);
+                }
                 if ( ! empty($parameter['orderby'])) {
                     $query->orderBy($parameter['orderby']);
                 }
