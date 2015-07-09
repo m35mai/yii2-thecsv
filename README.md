@@ -16,8 +16,29 @@ use m35\thecsv\theCsv;
 theCsv::export('tableName'); // return true if success
 ```
 
-## 3、参数
-### 3.1、导出数据表（以user表为例子）
+## 3、参数及示例
+### 3.0、参数列表
+#### 3.0.1、string类型
+直接指定表名称，下载该表所有数据，自动生成表字段名称。
+#### 3.0.2、array类型参数
+* 1. `table`：数据表名称 (`string`)
+* 2. `fields`：要导出的表字段 (`array`)
+* 3. `exceptFields`：是否是排除字段模式，默认false(`bool`)
+* 4. `header`：自定义表头(`array`)
+* 5. `condition`：导出表条件(`mixed`) 请参考http://www.yiiframework.com/doc-2.0/yii-db-query.html#where()-detail
+* 6. `limit`：限制数量(`int`)
+* 7. `offset`：偏移(`int`)
+* 8. `orderby`：排序(`mixed`) 请参考http://www.yiiframework.com/doc-2.0/yii-db-querytrait.html#orderBy()-detail
+* 9. `name`：自定义文件名(`string`)
+* 10. `sql`：自定义SQL语句(`string`)
+* 11. `bind`：与sql结合绑定参数(`array`)
+* 12. `target`：导出目录，如果设置target，则默认行为由下载变为保存文件到服务器(`string`)
+* 13. `fp`：直接导出数据到指定的资源(`resource`)
+* 14. `data`：自定义导出数据(`array`)
+* 15. `query`：Yii2框架Query类型资源(`yii\db\Query`) 请参考http://www.yiiframework.com/doc-2.0/yii-db-query.html
+* 16. `reader`：Yii2框架DataReader类型资源(`yii\db\DataReader`) 请参考http://www.yiiframework.com/doc-2.0/yii-db-datareader.html
+
+### 3.1、示例：导出数据表（以user表为例子）
 #### 3.1.1、导出数据表完整数据
 ```php
 theCsv::export('user');
@@ -105,7 +126,7 @@ theCsv::export([
 ]);
 ```
 
-## 3.2、导出数据
+## 3.2、示例：导出数据
 ```
 theCsv::export([
     'data' => [
@@ -115,7 +136,7 @@ theCsv::export([
 ]);
 ```
 
-## 3.3、其他示例
+## 3.3、示例：其他
 ### 3.3.1
 ```
 theCsv::export([
