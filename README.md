@@ -90,3 +90,63 @@ theCsv::export([
     'bind' => [':id' => 1, ':status' => 1],
 ]);
 ```
+
+### 3.1.10、使用Query
+```
+theCsv::export([
+    'query' => (new \yii\db\Query)->from('user'),
+]);
+```
+
+### 3.1.11、使用reader
+```
+theCsv::export([
+    'reader' => \Yii::$app->getDb()->createCommand('SELECT * FROM user')->query(),
+]);
+```
+
+## 3.2、导出数据
+```
+theCsv::export([
+    'data' => [
+        ['a', 'b', 'c'],
+        ['A', 'B', 'C'],
+    ],
+]);
+```
+
+## 3.3、其他示例
+### 3.3.1
+```
+theCsv::export([
+    'data' => [
+        ['a', 'b', 'c'],
+        ['A', 'B', 'C'],
+    ],
+    'name' => 'data.csv',
+]);
+```
+
+### 3.3.2
+```
+theCsv::export([
+    'data' => [
+        ['a', 'b', 'c'],
+        ['A', 'B', 'C'],
+    ],
+    'name' => 'data.csv',    // 自定义导出文件名称
+    'target' => './',        // 如果指定导出目录，则默认行为从下载变为保存到指定目录
+]);
+```
+
+### 3.3.3
+```
+$fp = fopen('./data.csv', 'w');
+theCsv::export([
+    'data' => [
+        ['a', 'b', 'c'],
+        ['A', 'B', 'C'],
+    ],
+    'fp' => $fp,    // 如果指定fp资源，则默认行为从下载变为直接写入该资源
+]);
+```
